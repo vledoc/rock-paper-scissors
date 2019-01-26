@@ -1,65 +1,18 @@
 <DOCTYPE html>
 <html>
-    <head>
-        <title>Rock, Paper, Scissors</title>
-    </head>
-    <body>
+<head>
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
 
-    </body>
-    <script>
-    
-    function computerPlay() {
-        var choices = ["rock", "paper", "scissors"];
-        computerSelection = choices[Math.floor(Math.random() * choices.length)];
-        return computerSelection;
-    }
-    
-    var playerSelection;
+<div id="container">
+    <button id="btn1">Rock</button>
+    <button id="btn2">Paper</button>
+    <button id="btn3">Scissors</button>
+</div>
 
-    var wins = 0;
-    var losses = 0;
-    var draws = 0;
+ </body>
 
-    function playRound(playerSelection, computerSelection) {
-        var playerSelection = prompt("Pick rock, paper, or scissors.");
-        playerSelection = playerSelection.toLowerCase();
-
-        if (playerSelection == computerSelection) {
-               draws++;
-               alert("It's a tie!");
-           } else if (playerSelection == "rock" && computerSelection == "scissors") {
-               wins++;
-               alert("You win! Rock beats scissors");
-           } else if (playerSelection == "paper" && computerSelection == "rock") {
-               wins++;
-               alert("You win! Paper beats rock")
-           } else if (playerSelection == "scissors" && computerSelection == "paper") {
-               wins++;
-               alert("You win! Scissors beats paper");
-           } else if (playerSelection == "rock" && computerSelection == "paper") {
-               losses++;
-           } else if (playerSelection == "paper" && computerSelection == "scissors") {
-               losses++;
-               alert("You lose! Scissors beats paper")
-           } else if (playerSelection == "scissors" && computerSelection == "rock") {
-               losses++;
-               alert("You lose! Rock beats scissors");
-           } else {
-               alert("Oops! Something went wrong.");
-           }
-       }
-
-    function game() {
-        var i = 0;
-
-        for (i = 0; i <= 5; i++) {
-            playRound(playerSelection, computerPlay());
-            alert("Wins: " + wins + "\n" + "Losses: " + losses + "\n" + "Draws: " + draws);
-        }
-    }
-
-    game();
-
-    </script>
+<script type="text/javascript" src="script.js"></script>
 
 </html>
